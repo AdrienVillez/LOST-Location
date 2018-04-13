@@ -1,0 +1,6 @@
+framework module Pods_LOSTLocations {
+  umbrella header "Pods-LOSTLocations-umbrella.h"
+
+  export *
+  module * { export * }
+}
