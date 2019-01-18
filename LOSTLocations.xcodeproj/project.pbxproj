@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,6 @@
 		7A27E2D51EB7086B002391AD /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A27E2D41EB7086B002391AD /* CacheManager.swift */; };
 		7A34A1FE1DEA3B47008B3702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34A1FD1DEA3B47008B3702 /* AppDelegate.swift */; };
 		7A34A2031DEA3B47008B3702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A34A2011DEA3B47008B3702 /* Main.storyboard */; };
-		7A34A2061DEA3B47008B3702 /* LOSTLocations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A34A2041DEA3B47008B3702 /* LOSTLocations.xcdatamodeld */; };
 		7A34A2081DEA3B47008B3702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A34A2071DEA3B47008B3702 /* Assets.xcassets */; };
 		7A34A20B1DEA3B47008B3702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A34A2091DEA3B47008B3702 /* LaunchScreen.storyboard */; };
 		7A34A2161DEA3B47008B3702 /* LOSTLocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A34A2151DEA3B47008B3702 /* LOSTLocationsTests.swift */; };
@@ -30,6 +29,10 @@
 		7AF853B01F6CA2B800D44F71 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF853AF1F6CA2B800D44F71 /* MessageUI.framework */; };
 		7AFFF48D1EF6556F00D444AB /* LocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFF48C1EF6556F00D444AB /* LocationsModel.swift */; };
 		7AFFF4911EF6627900D444AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFF4901EF6627900D444AB /* DetailViewController.swift */; };
+		894B31822159EEC700E95DAB /* EmbededSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B31812159EEC700E95DAB /* EmbededSettingsViewController.swift */; };
+		89578D5D2178214400228954 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89578D5C2178214400228954 /* WebViewController.swift */; };
+		89AF0477214D8A39008507D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89AF0476214D8A39008507D9 /* GoogleService-Info.plist */; };
+		89FB6A962158441000050B2C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FB6A952158441000050B2C /* Helper.swift */; };
 		D09C89C90E8DB0C1BA36FB70 /* Pods_LOSTLocationsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35BEAAF5E079D601A57C918D /* Pods_LOSTLocationsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +66,6 @@
 		7A34A1FA1DEA3B47008B3702 /* LOSTLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOSTLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A34A1FD1DEA3B47008B3702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A34A2021DEA3B47008B3702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7A34A2051DEA3B47008B3702 /* LOSTLocations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LOSTLocations.xcdatamodel; sourceTree = "<group>"; };
 		7A34A2071DEA3B47008B3702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A34A20A1DEA3B47008B3702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A34A20C1DEA3B47008B3702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +87,10 @@
 		7AFFF48C1EF6556F00D444AB /* LocationsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsModel.swift; sourceTree = "<group>"; };
 		7AFFF4901EF6627900D444AB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7F179606738643C13BA91912 /* Pods-LOSTLocations.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOSTLocations.release.xcconfig"; path = "Pods/Target Support Files/Pods-LOSTLocations/Pods-LOSTLocations.release.xcconfig"; sourceTree = "<group>"; };
+		894B31812159EEC700E95DAB /* EmbededSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbededSettingsViewController.swift; sourceTree = "<group>"; };
+		89578D5C2178214400228954 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		89AF0476214D8A39008507D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		89FB6A952158441000050B2C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E07C5496F263BFB95D9FF1B8 /* Pods-LOSTLocations.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOSTLocations.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LOSTLocations/Pods-LOSTLocations.debug.xcconfig"; sourceTree = "<group>"; };
 		F1987EF14D490E3152E35224 /* Pods-LOSTLocationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOSTLocationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LOSTLocationsTests/Pods-LOSTLocationsTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,13 +165,13 @@
 				7AFFF4921EF6628000D444AB /* Detail View */,
 				7A5F12EF1EED257700F58124 /* MapView */,
 				7A5F12EE1EED255800F58124 /* Helpers */,
-				7A9D2D2C1F64F8EE00D2F0BD /* SettingsViewController.swift */,
+				89C017B121628D5800B99500 /* Settings */,
 				7A34A2011DEA3B47008B3702 /* Main.storyboard */,
 				7A34A2071DEA3B47008B3702 /* Assets.xcassets */,
 				7A16DC9D1F2BE4BE00F1CAE1 /* Audio */,
 				7A34A2091DEA3B47008B3702 /* LaunchScreen.storyboard */,
+				89AF0476214D8A39008507D9 /* GoogleService-Info.plist */,
 				7A34A20C1DEA3B47008B3702 /* Info.plist */,
-				7A34A2041DEA3B47008B3702 /* LOSTLocations.xcdatamodeld */,
 			);
 			path = LOSTLocations;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				7A13E5071EB642DE00CEACAF /* FirebaseManager.swift */,
 				7A27E2D41EB7086B002391AD /* CacheManager.swift */,
 				7AFFF48C1EF6556F00D444AB /* LocationsModel.swift */,
+				89FB6A952158441000050B2C /* Helper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -236,6 +243,16 @@
 			name = "Detail View";
 			sourceTree = "<group>";
 		};
+		89C017B121628D5800B99500 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7A9D2D2C1F64F8EE00D2F0BD /* SettingsViewController.swift */,
+				894B31812159EEC700E95DAB /* EmbededSettingsViewController.swift */,
+				89578D5C2178214400228954 /* WebViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		EDE838C2F5E081083FFC1D0D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,7 +278,6 @@
 				7A34A1F71DEA3B46008B3702 /* Frameworks */,
 				7A34A1F81DEA3B46008B3702 /* Resources */,
 				3327B454648DAB4B3A60E401 /* [CP] Embed Pods Frameworks */,
-				365354F40D3C26EC70D619FB /* [CP] Copy Pods Resources */,
 				7A55420C1FB7EEB5003D22DB /* ShellScript */,
 			);
 			buildRules = (
@@ -282,7 +298,6 @@
 				7A34A20E1DEA3B47008B3702 /* Frameworks */,
 				7A34A20F1DEA3B47008B3702 /* Resources */,
 				4C25CC480677B1FC9FF8BE3F /* [CP] Embed Pods Frameworks */,
-				769E59E6671914CA64F369FF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,8 +317,6 @@
 				7A34A2181DEA3B47008B3702 /* Sources */,
 				7A34A2191DEA3B47008B3702 /* Frameworks */,
 				7A34A21A1DEA3B47008B3702 /* Resources */,
-				CDC5C3E006D187F2B8A68DB3 /* [CP] Embed Pods Frameworks */,
-				5A50EADB1A9D55D8BD51F9EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,7 +335,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = AdrienVillez;
 				TargetAttributes = {
 					7A34A1F91DEA3B46008B3702 = {
@@ -353,7 +366,7 @@
 				};
 			};
 			buildConfigurationList = 7A34A1F51DEA3B46008B3702 /* Build configuration list for PBXProject "LOSTLocations" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -383,6 +396,7 @@
 				7A16DC9C1F2BE4B600F1CAE1 /* smokeloop.wav in Resources */,
 				7A34A2081DEA3B47008B3702 /* Assets.xcassets in Resources */,
 				7A34A2031DEA3B47008B3702 /* Main.storyboard in Resources */,
+				89AF0477214D8A39008507D9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,35 +425,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LOSTLocations/Pods-LOSTLocations-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LOSTLocations/Pods-LOSTLocations-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		365354F40D3C26EC70D619FB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LOSTLocations/Pods-LOSTLocations-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4C25CC480677B1FC9FF8BE3F /* [CP] Embed Pods Frameworks */ = {
@@ -449,32 +448,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LOSTLocationsTests/Pods-LOSTLocationsTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LOSTLocationsTests/Pods-LOSTLocationsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5A50EADB1A9D55D8BD51F9EA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LOSTLocationsUITests/Pods-LOSTLocationsUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7192CB50EE38C3EDAEC73F1C /* [CP] Check Pods Manifest.lock */ = {
@@ -493,21 +477,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		769E59E6671914CA64F369FF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LOSTLocationsTests/Pods-LOSTLocationsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7A55420C1FB7EEB5003D22DB /* ShellScript */ = {
@@ -541,21 +510,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CDC5C3E006D187F2B8A68DB3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LOSTLocationsUITests/Pods-LOSTLocationsUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E553C12EACF9CE9F756B44C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -581,16 +535,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894B31822159EEC700E95DAB /* EmbededSettingsViewController.swift in Sources */,
+				89FB6A962158441000050B2C /* Helper.swift in Sources */,
 				7AFFF4911EF6627900D444AB /* DetailViewController.swift in Sources */,
 				7A34A1FE1DEA3B47008B3702 /* AppDelegate.swift in Sources */,
 				7A9D2D2D1F64F8EE00D2F0BD /* SettingsViewController.swift in Sources */,
 				7A34A2321DEA51BC008B3702 /* Locations.swift in Sources */,
 				7A13E5081EB642DE00CEACAF /* FirebaseManager.swift in Sources */,
-				7A34A2061DEA3B47008B3702 /* LOSTLocations.xcdatamodeld in Sources */,
 				7A27E2D51EB7086B002391AD /* CacheManager.swift in Sources */,
 				7A34A23A1DEA57F2008B3702 /* LocationsCollectionViewController.swift in Sources */,
 				7A34A2381DEA57DC008B3702 /* MapViewController.swift in Sources */,
 				7A34A23C1DEA5867008B3702 /* LocationsCollectionViewCell.swift in Sources */,
+				89578D5D2178214400228954 /* WebViewController.swift in Sources */,
 				7AFFF48D1EF6556F00D444AB /* LocationsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +615,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -666,6 +623,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -699,6 +657,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Debug;
 		};
@@ -715,6 +674,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -722,6 +682,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -747,6 +708,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -756,13 +718,15 @@
 			baseConfigurationReference = E07C5496F263BFB95D9FF1B8 /* Pods-LOSTLocations.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = M4X8XGTSJ2;
 				INFOPLIST_FILE = LOSTLocations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AVStudio.LOSTLocations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -772,13 +736,15 @@
 			baseConfigurationReference = 7F179606738643C13BA91912 /* Pods-LOSTLocations.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = M4X8XGTSJ2;
 				INFOPLIST_FILE = LOSTLocations/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AVStudio.LOSTLocations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -889,19 +855,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7A34A2041DEA3B47008B3702 /* LOSTLocations.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7A34A2051DEA3B47008B3702 /* LOSTLocations.xcdatamodel */,
-			);
-			currentVersion = 7A34A2051DEA3B47008B3702 /* LOSTLocations.xcdatamodel */;
-			path = LOSTLocations.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7A34A1F21DEA3B46008B3702 /* Project object */;
 }

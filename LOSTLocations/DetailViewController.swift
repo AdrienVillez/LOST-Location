@@ -19,70 +19,40 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate
     var selectedLocationLongitude: Float = 0.00
     var selectedLocationURL: String = ""
     
-    override var prefersStatusBarHidden: Bool
-    {
+    override var prefersStatusBarHidden: Bool {
         return true
     }
     
     // MARK: @IBOutlets
-        
-    @IBOutlet weak var titleLabel: UILabel!
-    {
-        didSet
-        {
-            titleLabel.text = location?.title
-        }
+    @IBOutlet weak var titleLabel: UILabel! {
+        didSet { titleLabel.text = location?.title }
     }
     
-    @IBOutlet weak var nameInLOSTLabel: UILabel!
-    {
-        didSet
-        {
-            nameInLOSTLabel.text = location?.nameInLOST
-        }
+    @IBOutlet weak var nameInLOSTLabel: UILabel! {
+        didSet { nameInLOSTLabel.text = location?.nameInLOST }
     }
     
-    @IBOutlet weak var locationDescriptionLabel: UILabel!
-    {
-        didSet
-        {
-            locationDescriptionLabel.text = location?.locationDescription
-        }
+    @IBOutlet weak var locationDescriptionLabel: UILabel! {
+        didSet { locationDescriptionLabel.text = location?.locationDescription }
     }
     
-    @IBOutlet weak var imageFromLabel: UILabel!
-    {
-        didSet
-        {
-            imageFromLabel.text = "Image from \(location!.imageFrom)."
-        }
+    @IBOutlet weak var imageFromLabel: UILabel! {
+        didSet { imageFromLabel.text = "Image from \(location!.imageFrom)." }
     }
     
-    @IBOutlet weak var isPublicAccessibleLabel: UILabel!
-    {
-        didSet
-        {
-            isPublicAccessibleLabel.text = location?.getAccessibilityString()
-        }
+    @IBOutlet weak var isPublicAccessibleLabel: UILabel! {
+        didSet { isPublicAccessibleLabel.text = location?.getAccessibilityString() }
     }
     
-    @IBOutlet weak var locationImageView: UIImageView!
-    {
-        didSet
-        {
-            locationImageView.image = UIImage(data: CacheManager.getImageFromCache(imageName: location!.image)!)
-        }
+    @IBOutlet weak var locationImageView: UIImageView! {
+        didSet { locationImageView.image = UIImage(data: CacheManager.getImageFromCache(imageName: location!.image)!) }
     }
     
-    @IBOutlet weak var addressLabel: UILabel!
-        {
-        didSet
-        {
-            addressLabel.text = location?.address
-        }
+    @IBOutlet weak var addressLabel: UILabel! {
+        didSet { addressLabel.text = location?.address }
     }
     
-    @IBOutlet weak var imageContainerView: UIView!
+    @IBOutlet weak var HeaderView: UIView!
     @IBOutlet weak var mapContainerView: UIView!
     @IBOutlet weak var isPublicAccessibleContainer: UIView!
     @IBOutlet weak var detailMapView: MKMapView!
@@ -104,6 +74,11 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate
     
         self.isPublicAccessibleContainer.backgroundColor = location?.getAccessibilityColor()
         self.isPublicAccessibleLabel.textColor = UIColor.white
+        
+        // Sets the Header View heigth (Containing the image) to 1/4 of the screen height.
+        let screenHeigth = self.view.frame.height
+        // HeaderView.frame.height = (screenHeigth / 4) cannot do that, heigth is read only property!  Need to update the heigth constraint instead.
+        print("iPhone Screen heigth is \(screenHeigth) points and the header will be")
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -135,7 +110,7 @@ class DetailViewController: UIViewController, CLLocationManagerDelegate
         mkPointForDisplay.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitudeForDisplay), longitude: CLLocationDegrees(selectedLocationLongitude)) // Pushing the latitude up to have the pin centered lower.
         
         // 500, 500 is zoomed out enough to cover a couple of blocks/streets to help the use to see its location compared to the selected one.
-        let region = MKCoordinateRegionMakeWithDistance(mkPointForDisplay.coordinate, 500, 500)  // Sets the zoom level.
+        let region = MKCoordinateRegion(center: mkPointForDisplay.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)  // Sets the zoom level.
         detailMapView.setRegion(region, animated: true) // Displays the zoom level on the mapView
         detailMapView.addAnnotation(mkPoint) // Displays the annotation/pin on the map
         // detailMapView.setCenter(mkPoint.coordinate, animated: true) // Centers the pin on the mapView.

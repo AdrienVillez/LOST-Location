@@ -16,7 +16,7 @@ class CacheManager: NSObject
     {
         // Checks UserDefaults for locations:
         let defaults = UserDefaults.standard
-        let data = defaults.value(forKey: "Locations") as? NSDictionary
+        let data = defaults.value(forKey: Helper.Defaults().Locations) as? NSDictionary
         print("CacheManager: Locations are now returned from the cache.")
         return data
     }
@@ -25,17 +25,16 @@ class CacheManager: NSObject
     {
         // Saves the data into UserDefaults:
         let defaults = UserDefaults.standard
-        defaults.set(data, forKey: "Locations")
+        defaults.set(data, forKey: Helper.Defaults().Locations)
         print("CacheManager: Locations are now saved into the cache.")
         defaults.synchronize()
     }
     
     // MARK: - Version Functions
-    
     static func getVersionFromCache() -> Int?
     {
         let defaults = UserDefaults.standard
-        let versionNumber = defaults.integer(forKey: "Version")
+        let versionNumber = defaults.integer(forKey: Helper.Defaults().Version)
         print("CacheManager: Version is now returned from cache.")
         return versionNumber
     }
@@ -43,7 +42,7 @@ class CacheManager: NSObject
     static func saveVersionIntoCache(version: Int)
     {
         let defaults = UserDefaults.standard
-        defaults.set(version, forKey: "Version")
+        defaults.set(version, forKey: Helper.Defaults().Locations)
         print("CacheManager: Version is now saved into the cache.")
         defaults.synchronize()
     }
@@ -83,13 +82,4 @@ class CacheManager: NSObject
         print("CacheManager: Images are now saved into the cache.")
         defaults.synchronize()
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

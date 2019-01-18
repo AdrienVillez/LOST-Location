@@ -14,7 +14,8 @@ private let toDetailSegue = "toDetailSegue"
 private let detailScreenIdentifier = "DetailScreen"
 private let settingsScreenIdentifier = "SettingsScreen"
 
-class LocationsCollectionViewController: UICollectionViewController, LocationsModelDelegate, UICollectionViewDelegateFlowLayout {
+class LocationsCollectionViewController: UICollectionViewController, LocationsModelDelegate, UICollectionViewDelegateFlowLayout
+{
     // MARK: - Properties
     let locationsModel = LocationsModel()
     let screenSize: CGSize = UIScreen.main.bounds.size
@@ -28,7 +29,8 @@ class LocationsCollectionViewController: UICollectionViewController, LocationsMo
     
     // MARK: - App Life Cycle:
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         collectionView?.delegate = self
@@ -37,6 +39,7 @@ class LocationsCollectionViewController: UICollectionViewController, LocationsMo
         
         // Will get locations, or from the cache or from the database.
         locationsModel.getLocations()
+        
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -150,10 +153,4 @@ class LocationsCollectionViewController: UICollectionViewController, LocationsMo
         settingsViewController!.modalPresentationStyle = .fullScreen
         present(settingsViewController!, animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
 }

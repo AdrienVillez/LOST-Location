@@ -7,7 +7,7 @@ target 'LOSTLocations' do
 
   # Pods for LOSTLocations
 
-  	pod 'Firebase/Core'
+  pod 'Firebase/Core'
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
 	pod 'Fabric', '~> 1.7.2'

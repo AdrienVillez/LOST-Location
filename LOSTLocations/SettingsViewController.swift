@@ -8,32 +8,30 @@
 
 import UIKit
 import AVFoundation
-import MessageUI
 import Crashlytics
 
-class SettingsViewController: UIViewController, MFMailComposeViewControllerDelegate
+class SettingsViewController: UIViewController
 {
-
-    @IBOutlet weak var emailUsButton: UIButton!
+    // @IBOutlet weak var emailUsButton: UIButton!
     @IBOutlet weak var numbersButton: UIButton!
     
-    private let contactEmail: String = "avstudioapp@gmail.com"
-    
+    private let webViewControllerID: String = "WebViewController"
+        
     let secretNumber: Int = 4
     var audioPlayer = AVAudioPlayer()
-    var mailComposer: MFMailComposeViewController?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        emailUsButton.layer.cornerRadius = 4.0
+        // emailUsButton.layer.cornerRadius = 8.0
         
         // sound file.
         let sound = Bundle.main.path(forResource: "smokeloop", ofType: "wav")
         // copy this syntax, it tells the compiler what to do when action is received
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
             try AVAudioSession.sharedInstance().setActive(true)
         }
         catch{
@@ -41,38 +39,12 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         }
 
     }
-
-
+    
     @IBAction func exitViewControllerButtonTapped(_ sender: UIButton)
     {
         dismiss(animated: true, completion: nil)
     }
-
-    @IBAction func sendEmailTapped(_ sender: UIButton)
-    {
-        if MFMailComposeViewController.canSendMail()
-        {
-            self.mailComposer = MFMailComposeViewController()
-            
-            self.mailComposer?.mailComposeDelegate = self
-            
-            self.mailComposer?.setToRecipients([contactEmail])
-            self.mailComposer?.setSubject("Hello, I have some feedbacks for the Locations app.")
-            
-            self.present(self.mailComposer!, animated: true, completion: nil)
-        }
-        else
-        {
-            // User doesn't have any email account set, display an alert.
-            let errorAlert = UIAlertController(title: nil, message: "No email account has been set up on this device.  Check your settings and press the 'Email Us' button again.", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            
-            errorAlert.addAction(okAction)
-            present(errorAlert, animated: true, completion: nil)
-        }
-    }
     
-    // Easter Egg:
     @IBAction func numbersButtonTapped(_ sender: UIButton)
     {
         print("Numbers were pressed.")
@@ -122,37 +94,20 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         }
     }
     
-    
-    // MARK: - MailComposerDelegate Methods
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
-    {
-        switch result.rawValue {
-        case MFMailComposeResult.sent.rawValue:
-            print("Email was sent.")
-        case MFMailComposeResult.cancelled.rawValue:
-            print("Email was cancelled.")
-        case MFMailComposeResult.failed.rawValue:
-            print("Email failed.")
-        default:
-            print("Email failed with the following error: \(error!).")
+    @IBAction func privacyPolicyTapped(_ sender: UIButton) {
+        // Send the user to the privacy policy website.
+        
+        // Creates an instance of webViewController and check that it isn't nil.
+        let webViewViewController = storyboard?.instantiateViewController(withIdentifier: webViewControllerID) as? WebViewController
+        guard let _ = webViewViewController else
+        {
+            return
         }
         
-        // The VC has to be dismissed:
-        self.dismiss(animated: true, completion: nil)
+        // Sets the presentation mode:
+        webViewViewController!.modalPresentationStyle = .popover
+        webViewViewController!.modalTransitionStyle = .coverVertical
+        present(webViewViewController!, animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

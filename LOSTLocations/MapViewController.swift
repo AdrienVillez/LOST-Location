@@ -74,7 +74,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, LocationsM
     // Map focus area (O'ahu)
     func centerMapOnLocation(mapLocation: CLLocation)
     {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(mapLocation.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+        let coordinateRegion = MKCoordinateRegion(center: mapLocation.coordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
@@ -98,7 +98,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, LocationsM
         
         UIView.animate(withDuration: 3.0, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.5, options: .curveEaseOut, animations: {
             
-            let userRegion = MKCoordinateRegionMakeWithDistance(userCurrentLocation.coordinate, 700, 700)  // Sets the zoom level.
+            let userRegion = MKCoordinateRegion(center: userCurrentLocation.coordinate, latitudinalMeters: 700, longitudinalMeters: 700)  // Sets the zoom level.
             self.mapView.setRegion(userRegion, animated: true)
             
             // self.centerMapOnLocation(mapLocation: userCurrentLocation)

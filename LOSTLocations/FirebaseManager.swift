@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 
-@objc protocol FirebaseManagerDelegate {    
+@objc protocol FirebaseManagerDelegate
+{    
     @objc optional func firebaseManager(locations: [Locations])
     @objc optional func firebaseManager(imageName: String, imageData: Data)
 }
@@ -22,8 +23,7 @@ class FirebaseManager: NSObject {
     
     // MARK: - Initializer
     
-    override init()
-    {
+    override init() {
         // Initialize the databse reference:
         reference = Database.database().reference()
         
@@ -134,6 +134,14 @@ class FirebaseManager: NSObject {
             // Create a Locations object for each and add it to an array to be returned.
             let location = Locations()
             
+            // --------------------
+            // Current workaround for the: 'unable to bridge nsnumber to float'
+            let latitudeAsNSNumber: NSNumber = locationDataDict["latitude"] as! NSNumber
+            let longitudeAsNSNumber: NSNumber = locationDataDict["longitude"] as! NSNumber
+            let latitudeAsFloat: Float = latitudeAsNSNumber.floatValue
+            let longitudeAsFloat: Float = longitudeAsNSNumber.floatValue
+            // --------------------
+            
             location.id = locationID as! String
             location.title = locationDataDict["title"] as! String
             location.nameInLOST = locationDataDict["nameInLOST"] as! String
@@ -141,8 +149,8 @@ class FirebaseManager: NSObject {
             location.locationDescription = locationDataDict["description"] as! String
             location.image = locationDataDict["image"] as! String
             location.imageFrom = locationDataDict["imageFrom"] as! String
-            location.latitude = locationDataDict["latitude"] as! Float
-            location.longitude = locationDataDict["longitude"] as! Float
+            location.latitude = latitudeAsFloat
+            location.longitude = longitudeAsFloat
             location.isPublicAccessible = LocationAccessibilityType(rawValue: locationDataDict["isPublicAccessible"] as! Int)!
             
             allLocations += [location]

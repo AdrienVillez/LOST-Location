@@ -16,12 +16,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        analyticsAreDisabled = UserDefaults.standard.bool(forKey: Helper.Defaults().AnalyticsDisabled)
+        print("Application launched with analyticsAreDisabled set as: \(analyticsAreDisabled)")
+        
+        if analyticsAreDisabled == false {
+            Fabric.with([Crashlytics.self])
+        } else {
+            print("App launched with Analytics off as the user previously disabled them.")
+        }
+        
+//        // Fabric/Analytics
+//        if let analyticsEnabled = UserDefaults.standard.object(forKey: "analytics") as? Bool {
+//            // True or false
+//            if analyticsEnabled == true {
+//                print("AppDelegate: analytics is enabled - \(analyticsEnabled)")
+//                Fabric.with([Crashlytics.self])
+//            } else {
+//                print("analyticsEnabled is false")
+//            }
+//        } else {
+//            // nil
+//            print("analyticsEnabled is nil, set it to true.")
+//            analyticsEnabled = true
+//        }
+        
         FirebaseApp.configure()
-        Fabric.with([Crashlytics.self])
         
         return true
     }
