@@ -13,7 +13,7 @@ class WebViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     
-    private let privacyURL: String = "https://adrienvillez.com/ios-privacy-policy.html"
+    private let privacyURL: String = "https://yourwebsitehere.com/ios-privacy-policy.html"
 
     
     override func viewDidLoad() {
