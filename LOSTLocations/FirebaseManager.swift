@@ -9,8 +9,7 @@
 import UIKit
 import Firebase
 
-@objc protocol FirebaseManagerDelegate
-{    
+@objc protocol FirebaseManagerDelegate {    
     @objc optional func firebaseManager(locations: [Locations])
     @objc optional func firebaseManager(imageName: String, imageData: Data)
 }

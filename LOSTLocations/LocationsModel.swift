@@ -9,25 +9,21 @@
 import UIKit
 
 
-protocol LocationsModelDelegate
-{
+protocol LocationsModelDelegate {
     func locationsModel(locations: [Locations])
     func locationsModel(imageName: String, imageData: Data)
 }
 
 
 
-class LocationsModel: NSObject, FirebaseManagerDelegate
-{
+class LocationsModel: NSObject, FirebaseManagerDelegate {
     // Properties
     var delegate: LocationsModelDelegate?
     var firebaseManager: FirebaseManager?
     
-    func getLocations()
-    {
+    func getLocations() {
         // Get locations from FirebaseManager
-        if firebaseManager == nil
-        {
+        if firebaseManager == nil {
             firebaseManager = FirebaseManager()
             firebaseManager!.firebaseManagerDelegate = self
         }
@@ -36,19 +32,15 @@ class LocationsModel: NSObject, FirebaseManagerDelegate
         firebaseManager!.getLocationsFromDatabase()
     }
     
-    func getImage(imageName: String)
-    {
+    func getImage(imageName: String) {
         firebaseManager?.getImageFromDatabase(imageName: imageName)
     }
     
-    func checkDataVersion()
-    {
-        if firebaseManager == nil
-        {
+    func checkDataVersion() {
+        if firebaseManager == nil {
             firebaseManager = FirebaseManager()
             firebaseManager!.firebaseManagerDelegate = self
         }
-        
         firebaseManager!.getVersionFromDataBase()
     }
     
