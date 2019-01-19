@@ -30,8 +30,7 @@ class SettingsViewController: UIViewController
         // copy this syntax, it tells the compiler what to do when action is received
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-            
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.ambient)
+            try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
         }
         catch{
